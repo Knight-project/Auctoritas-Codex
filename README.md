@@ -15,19 +15,19 @@ The app is a focused gateway to the Codex site. I kept the UI minimal and the ae
 
 ### Key Features:
 * **Full Integration:** A dedicated window for the Auctoritas Codex site.
-* **Upload & Download Support:** I’ve made sure file handling works—you can download notes or upload resources directly through the app. 📥
+* **Upload & Download Support:** I’ve made sure file handling works—you can download notes or upload resources directly through the app.
 * **Minimalist Design:** No extra fluff. The UI is simple and stays out of the way.
 * **First Release:** Version 1.0 is officially out and ready for use.
 
 ---
 
-## ⚠️ Current Status
+## Current Status
 * **Internet Required:** For now, the app only works if you are connected to the internet. 
 * **Offline Features:** I am working on adding offline support soon so you can check your files even without a connection.
 
 ---
 
-## Roadmap 🛠️
+## Roadmap 
 Since this is a personal project, I'll be updating it as I go. Upcoming goals include:
 * **Offline Mode:** Local caching for documents.
 * **Optimization:** Making the wrapper even lighter and faster.
@@ -47,3 +47,4 @@ I've released this under the **MIT License**. You are free to use, modify, and s
 ---
 
 > **Note:** I'm just a student from the 9th batch trying to make things a bit more convenient for us. If you find this helpful, feel free to share it with the rest of the department!
+
