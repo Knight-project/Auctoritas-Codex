@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#000000</item>
+
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+
+        <item name="windowSplashScreenIconBackgroundColor">#EEEEEE</item>
+
+        <item name="postSplashScreenTheme">@style/Theme.AuctaritasCodex</item>
+    </style>
+    <style name="Theme.AuctaritasCodex" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+
+        <item name="android:statusBarColor">#000000</item>
+
+        <item name="android:windowLightStatusBar">false</item>
+
+        <item name="android:navigationBarColor">#000000</item>
+    </style>
+<!--    <style name="Base.Theme.AuctaritasCodex" parent="Theme.Material3.DayNight.NoActionBar">-->
+<!--        &lt;!&ndash; Customize your light theme here. &ndash;&gt;-->
+<!--        &lt;!&ndash; <item name="colorPrimary">@color/my_light_primary</item> &ndash;&gt;-->
+<!--        -->
+<!--    </style>-->
+
+<!--    <style name="Theme.AuctaritasCodex" parent="Base.Theme.AuctaritasCodex" />-->
+</resources>
