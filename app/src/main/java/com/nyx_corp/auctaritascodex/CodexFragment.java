@@ -1,64 +1,56 @@
 package com.nyx_corp.auctaritascodex;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.widget.FrameLayout;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link CodexFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+
+import javax.annotation.Nullable;
+
 public class CodexFragment extends Fragment {
+    private WebView mywebview;
+    private FrameLayout container;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public CodexFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment CodexFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static CodexFragment newInstance(String param1, String param2) {
-        CodexFragment fragment = new CodexFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
+    @Nullable
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        // XML should have a FrameLayout with id: codex_container
         return inflater.inflate(R.layout.fragment_codex, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        container = view.findViewById(R.id.codex_container);
+
+        // Scope to 'requireActivity()' so the VM lives as long as the App/Activity
+        WebViewModel viewModel = new ViewModelProvider(requireActivity()).get(WebViewModel.class);
+
+        // Grab the specific one for this fragment
+        mywebview = viewModel.getCodexWebView();
+
+        // Check if it's still attached to an old version of this fragment
+        if (mywebview.getParent() != null) {
+            ((ViewGroup) mywebview.getParent()).removeView(mywebview);
+        }
+
+        // Stick it in the UI
+        container.addView(mywebview);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        // Remove it so the Fragment doesn't take the WebView down with it
+        if (container != null) {
+            container.removeAllViews();
+        }
     }
 }

@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
+import com.github.chrisbanes.photoview.PhotoView;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 
@@ -20,7 +21,10 @@ import java.util.Map;
 public class scheduleFragment extends Fragment {
 
     private FirebaseRemoteConfig mFirebaseRemoteConfig;
-    private ImageView imageView;
+    private PhotoView routineView;
+    private PhotoView calanderView;
+    
+    private PhotoView promoView;
 
     @Nullable
     @Override
@@ -34,7 +38,13 @@ public class scheduleFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         // MAKE SURE: 'my_image_view' is the ID in your XML layout
-        imageView = view.findViewById(R.id.my_image_view);
+        routineView = view.findViewById(R.id.routine_view);
+        calanderView = view.findViewById(R.id.calender_view);
+        promoView = view.findViewById(R.id.promo_view);
+
+
+
+
 
         // 1. Initialize Firebase Remote Config
         mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
@@ -46,27 +56,47 @@ public class scheduleFragment extends Fragment {
         mFirebaseRemoteConfig.setConfigSettingsAsync(configSettings);
 
         // 3. Set Defaults (Keys MUST match what you call in getString and what you set in Firebase Console)
-        Map<String, Object> defaultMap = new HashMap<>();
-        defaultMap.put("latest_routine", "https://drive.google.com/uc?export=download&id=16Hd6Cza2cdQv_fKGkcgTRoe0CIbrbQ0l");
-
-        mFirebaseRemoteConfig.setDefaultsAsync(defaultMap);
+//        Map<String, Object> defaultMap = new HashMap<>();
+//        defaultMap.put("latest_routine", "https://drive.google.com/uc?export=download&id=16Hd6Cza2cdQv_fKGkcgTRoe0CIbrbQ0l");
+//
+//        mFirebaseRemoteConfig.setDefaultsAsync(defaultMap);
 
         // 4. Run the fetch
-        fetchRemoteImage();
+
+        fetchCalenderImage();
+        fetchRoutineImage();
+        fetchPromoImage();
     }
 
-    private void fetchRemoteImage() {
+    private void fetchRoutineImage() {
         mFirebaseRemoteConfig.fetchAndActivate()
                 .addOnCompleteListener(getActivity(), task -> {
-                    // Log EVERY key available from the cloud to see what the app actually sees
-                    for (String key : mFirebaseRemoteConfig.getKeysByPrefix("")) {
-                        android.util.Log.d("FIREBASE_DEBUG", "Found key in cloud: " + key);
-                    }
 
                     String url = mFirebaseRemoteConfig.getString("latest_routine");
-                    android.util.Log.d("FIREBASE_DEBUG", "Final lol URL: " + url);
 
-                    Glide.with(this).load(url).into(imageView);
+                    Glide.with(this).load(url).into(routineView);
                 });
     }
+
+    private void fetchCalenderImage() {
+        mFirebaseRemoteConfig.fetchAndActivate()
+                .addOnCompleteListener(getActivity(), task -> {
+
+                    String url = mFirebaseRemoteConfig.getString("academic_calender");
+
+                    Glide.with(this).load(url).into(calanderView);
+                });
+    }
+
+    private void fetchPromoImage() {
+        mFirebaseRemoteConfig.fetchAndActivate()
+                .addOnCompleteListener(getActivity(), task -> {
+
+                    String url = mFirebaseRemoteConfig.getString("promo_image");
+
+                    Glide.with(this).load(url).into(promoView);
+                });
+    }
+
+
 }
