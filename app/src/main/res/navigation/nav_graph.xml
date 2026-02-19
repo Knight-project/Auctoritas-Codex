@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/schedule">
+
+    <fragment
+        android:id="@+id/codex"
+        android:name="com.nyx_corp.auctaritascodex.CodexFragment"
+        android:label="fragment_codex"
+        tools:layout="@layout/fragment_codex" />
+    <fragment
+        android:id="@+id/brain_q"
+        android:name="com.nyx_corp.auctaritascodex.brainQFragment"
+        android:label="fragment_brain_q"
+        tools:layout="@layout/fragment_brain_q" />
+    <fragment
+        android:id="@+id/schedule"
+        android:name="com.nyx_corp.auctaritascodex.scheduleFragment"
+        android:label="fragment_schedule"
+        tools:layout="@layout/fragment_schedule" />
+</navigation>

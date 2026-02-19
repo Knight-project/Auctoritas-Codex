@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/codex"
+        android:icon="@drawable/main_component_svgrepo_com"
+        android:title="Codex" />
+    <item
+        android:id="@+id/schedule"
+        android:icon="@drawable/schedule_calendar_svgrepo_com"
+        android:title="Schedule" />
+    <item
+        android:id="@+id/brain_q"
+        android:icon="@drawable/books_svgrepo_com"
+        android:title="Brain-Q" />
+</menu>
