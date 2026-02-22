@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/black">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select File Format"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/radio_group_file_format"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/rb_pdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PDF (.pdf)"
+            android:textColor="@android:color/white"
+            android:buttonTint="@android:color/white"/>
+
+        <RadioButton
+            android:id="@+id/rb_pptx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PowerPoint (.pptx)"
+            android:textColor="@android:color/white"
+            android:buttonTint="@android:color/white"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Download"
+        android:textColor="@android:color/black"
+        android:backgroundTint="@android:color/white"/>
+
+</LinearLayout>
