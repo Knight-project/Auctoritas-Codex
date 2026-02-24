@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
-        <item>@font/monoton</item>
+        <item>@font/shadow_hand</item>
+        <item>@font/ossan_reg</item>
+        <item>@font/franchise</item>
     </array>
 </resources>

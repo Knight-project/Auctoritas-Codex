@@ -26,13 +26,16 @@
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        app:layout_constraintCircleRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        app:itemTextAppearanceActive="@color/material_dynamic_secondary0"
+        app:itemIconTint="@color/navigation_item_tint"
+        app:itemTextColor="@color/navigation_item_tint"
+        app:itemActiveIndicatorStyle="@android:color/transparent"
+        app:itemPaddingBottom="10dp"
         app:backgroundTint="@color/black"
+        app:circularflow_radiusInDP="30"
         app:menu="@menu/bottom_nav_menu"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

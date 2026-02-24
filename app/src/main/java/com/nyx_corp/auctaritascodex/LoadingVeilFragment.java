@@ -16,8 +16,8 @@ import androidx.fragment.app.Fragment;
 public class LoadingVeilFragment extends Fragment {
 
     public static final String TAG = "LoadingVeilFragment";
-    private static final long DISPLAY_DURATION = 1500; // 1.5 seconds
-    private static final int FADE_DURATION = 500; // 500ms for a gentler animation
+    private static final long DISPLAY_DURATION = 600; // 1.5 seconds
+    private static final int FADE_DURATION = 600; // 500ms for a gentler animation
 
     private Handler handler = new Handler(Looper.getMainLooper());
     private Runnable removeRunnable;
@@ -42,7 +42,7 @@ public class LoadingVeilFragment extends Fragment {
         // Fade-in animation
         view.animate()
                 .alpha(1f)
-                .setDuration(FADE_DURATION)
+                .setDuration(0)
                 .setListener(null); // No listener needed for fade-in
 
         // Runnable to fade-out and remove the fragment

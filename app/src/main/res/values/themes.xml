@@ -7,10 +7,26 @@
         <item name="postSplashScreenTheme">@style/Theme.AuctaritasCodex</item>
     </style>
 
-    <style name="Theme.AuctaritasCodex" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.AuctaritasCodex" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:windowTranslucentStatus">false</item>
         <item name="android:statusBarColor">#000000</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:navigationBarColor">#000000</item>
+    </style>
+
+    <!-- Style for the LoadingVeilDialogFragment -->
+    <style name="Theme.LoadingVeilDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!-- Style for rounded corner AlertDialogs -->
+    <style name="AlertDialog.App.Rounded" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/rounded_dialog_background</item>
     </style>
 </resources>

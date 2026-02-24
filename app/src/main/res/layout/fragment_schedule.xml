@@ -3,186 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/schedule"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".scheduleFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
-<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:isScrollContainer="true">-->
-
-<!--        <com.google.android.material.card.MaterialCardView-->
-<!--            android:id="@+id/title_card"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="80dp"-->
-<!--            android:layout_margin="15dp"-->
-<!--            android:backgroundTint="@color/white"-->
-<!--            android:textAlignment="center"-->
-<!--            app:cardCornerRadius="8dp"-->
-<!--            app:layout_constraintTop_toTopOf="parent">-->
-
-<!--            <android.widget.TextView-->
-<!--                android:id="@+id/title"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:fontFamily="@font/monoton"-->
-<!--                android:gravity="center"-->
-<!--                android:text="SCHEDULES"-->
-<!--                android:textAlignment="center"-->
-<!--                android:textColor="#050505"-->
-<!--                android:textSize="40dp"-->
-<!--                android:typeface="monospace" />-->
-
-
-<!--        </com.google.android.material.card.MaterialCardView>-->
-
-<!--        <com.google.android.material.card.MaterialCardView-->
-<!--            android:id="@+id/routine_card"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_margin="15dp"-->
-<!--            app:cardCornerRadius="8dp"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/title_card"-->
-<!--            tools:layout_editor_absoluteX="15dp">-->
-
-<!--            <com.github.chrisbanes.photoview.PhotoView-->
-<!--                android:id="@+id/routine_view"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:scaleType="fitCenter" />-->
-<!--        </com.google.android.material.card.MaterialCardView>-->
-
-<!--        <com.google.android.material.card.MaterialCardView-->
-<!--            android:id="@+id/calender_card"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_margin="15dp"-->
-<!--            app:cardCornerRadius="8dp"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/routine_card">-->
-
-<!--            <com.github.chrisbanes.photoview.PhotoView-->
-<!--                android:id="@+id/calender_view"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:scaleType="fitCenter" />-->
-<!--        </com.google.android.material.card.MaterialCardView>-->
-
-
-<!--        <com.google.android.material.card.MaterialCardView-->
-<!--            android:id="@+id/website_qr_card"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="80dp"-->
-<!--            android:layout_margin="15dp"-->
-<!--            android:backgroundTint="@color/white"-->
-<!--            android:textAlignment="center"-->
-<!--            app:cardCornerRadius="8dp"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/calender_card">-->
-
-<!--            <android.widget.TextView-->
-<!--                android:id="@+id/web_title"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:fontFamily="@font/monoton"-->
-<!--                android:gravity="center"-->
-<!--                android:text="WEBSITE QR"-->
-<!--                android:textAlignment="center"-->
-<!--                android:textColor="#050505"-->
-<!--                android:textSize="40dp"-->
-<!--                android:typeface="monospace" />-->
-
-
-<!--        </com.google.android.material.card.MaterialCardView>-->
-
-<!--        <com.google.android.material.card.MaterialCardView-->
-<!--            android:id="@+id/website_card"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_margin="15dp"-->
-<!--            app:cardCornerRadius="8dp"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/website_qr_card">-->
-
-<!--            <com.github.chrisbanes.photoview.PhotoView-->
-<!--                android:id="@+id/website_view"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:scaleType="fitCenter" />-->
-<!--        </com.google.android.material.card.MaterialCardView>-->
-
-<!--        <com.google.android.material.card.MaterialCardView-->
-<!--            android:id="@+id/app_title_card"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="80dp"-->
-<!--            android:layout_margin="15dp"-->
-<!--            android:backgroundTint="@color/white"-->
-<!--            android:textAlignment="center"-->
-<!--            app:cardCornerRadius="8dp"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/website_card">-->
-
-<!--            <android.widget.TextView-->
-<!--                android:id="@+id/app_title"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:fontFamily="@font/monoton"-->
-<!--                android:gravity="center"-->
-<!--                android:text="DOWNLOAD QR"-->
-<!--                android:textAlignment="center"-->
-<!--                android:textColor="#050505"-->
-<!--                android:textSize="40dp"-->
-<!--                android:typeface="monospace" />-->
-
-
-<!--        </com.google.android.material.card.MaterialCardView>-->
-
-<!--        <com.google.android.material.card.MaterialCardView-->
-<!--            android:id="@+id/app_card"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_margin="15dp"-->
-<!--            app:cardCornerRadius="8dp"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/app_title_card">-->
-
-<!--            <com.github.chrisbanes.photoview.PhotoView-->
-<!--                android:id="@+id/app_view"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:scaleType="fitCenter" />-->
-<!--        </com.google.android.material.card.MaterialCardView>-->
-
-
-<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:isScrollContainer="true">
 
+
+
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/title_card"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:backgroundTint="@color/white"
+                android:layout_height="130dp"
+                android:layout_margin="0dp"
+                android:background="@color/white"
                 android:textAlignment="center"
-                app:cardCornerRadius="8dp"
-                app:layout_constraintTop_toTopOf="parent">
+                app:cardCornerRadius="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/white">
 
                 <android.widget.TextView
+                    android:background="@color/white"
                     android:id="@+id/title"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:fontFamily="@font/monoton"
+                    android:fontFamily="@font/franchise"
                     android:gravity="center"
                     android:text="SCHEDULES"
                     android:textAlignment="center"
-                    android:textColor="#050505"
-                    android:textSize="30dp"
-                    android:typeface="monospace" />
+                    android:textColor="@color/g5"
+                    android:textSize="80dp"
+                    android:typeface="monospace"
+                    android:letterSpacing="0.08"/>
 
 
             </com.google.android.material.card.MaterialCardView>
@@ -191,10 +53,12 @@
                 android:id="@+id/routine_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                app:cardCornerRadius="8dp"
+                android:layout_margin="0dp"
+                app:cardCornerRadius="0dp"
+                app:cardBackgroundColor="@color/white"
                 app:layout_constraintTop_toBottomOf="@id/title_card"
-                tools:layout_editor_absoluteX="15dp">
+                tools:layout_editor_absoluteX="15dp"
+                app:strokeColor="@color/white">
 
                 <com.github.chrisbanes.photoview.PhotoView
                     android:id="@+id/routine_view"
@@ -207,9 +71,14 @@
                 android:id="@+id/calender_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                app:cardCornerRadius="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/routine_card">
+                android:layout_margin="0dp"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="20dp"
+                android:outlineAmbientShadowColor="@color/g1"
+                android:outlineSpotShadowColor="@color/g1"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/routine_card"
+                app:strokeColor="@color/white">
 
                 <com.github.chrisbanes.photoview.PhotoView
                     android:id="@+id/calender_view"
@@ -218,46 +87,238 @@
                     android:scaleType="fitCenter" />
             </com.google.android.material.card.MaterialCardView>
 
-
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/promo_image_card_card"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:backgroundTint="@color/white"
+                android:id="@+id/site_btn"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.45"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_height="225dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="@color/g5"
                 android:textAlignment="center"
-                app:cardCornerRadius="8dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="5dp"
                 app:layout_constraintTop_toBottomOf="@+id/calender_card">
 
-                <android.widget.TextView
-                    android:id="@+id/promo_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/monoton"
-                    android:gravity="center"
-                    android:text="CODE-001"
-                    android:textAlignment="center"
-                    android:textColor="#050505"
-                    android:textSize="30dp"
-                    android:typeface="monospace" />
-
-
+                <ImageView
+                    android:contentDescription="Go to site"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:tint="@color/white"
+                    android:src="@drawable/main_component_svgrepo_com"
+                    android:layout_gravity="center"/>
+<!--                <android.widget.TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:fontFamily="@font/ossan_reg"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="GO TO SITE"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="35dp"-->
+<!--                    android:typeface="monospace" />-->
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/promo_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                app:cardCornerRadius="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/promo_image_card_card">
+                android:id="@+id/app_download_btn"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.45"
+                android:layout_height="104dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="@color/g4"
+                android:textAlignment="center"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/calender_card"
+                app:layout_constraintRight_toRightOf="parent">
+                <ImageView
+                    android:contentDescription="Download the latest version"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:tint="@color/white"
+                    android:src="@drawable/download_offline_svgrepo_com"
+                    android:layout_gravity="center"/>
 
-                <com.github.chrisbanes.photoview.PhotoView
-                    android:id="@+id/promo_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:scaleType="fitCenter" />
+<!--                <android.widget.TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:fontFamily="@font/ossan_reg"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="DOWNLOAD UPDATE"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#FFFFFF"-->
+<!--                    android:textSize="35dp"-->
+<!--                    android:typeface="monospace" />-->
             </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/brain_quarry_btn"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.45"
+                android:layout_height="104dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/g3"
+                android:textAlignment="center"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="5dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/app_download_btn">
+                <ImageView
+                    android:contentDescription="Go to site"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:tint="@color/white"
+                    android:src="@drawable/books_svgrepo_com"
+                    android:layout_gravity="center"/>
+
+<!--                <android.widget.TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:fontFamily="@font/ossan_reg"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="BRAIN QUARRY"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#FFFFFF"-->
+<!--                    android:textSize="35dp"-->
+<!--                    android:typeface="monospace"/>-->
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/discord_btn"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.45"
+                android:layout_height="225dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/g5"
+                android:textAlignment="center"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="5dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/brain_quarry_btn">
+                <ImageView
+                    android:contentDescription="Go to StrategicMind Discord Server"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:tint="@color/white"
+                    android:src="@drawable/discord_svgrepo_com"
+                    android:layout_gravity="center"/>
+
+<!--                <android.widget.TextView-->
+<!--                    android:id="@+id/discord_btn_title"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:fontFamily="@font/ossan_reg"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="DISCORD"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#FFFFFF"-->
+<!--                    android:textSize="35dp"-->
+<!--                    android:typeface="monospace" />-->
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/telegram_btn"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.45"
+                android:layout_height="104dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/g3"
+                android:textAlignment="center"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/site_btn">
+                <ImageView
+                    android:contentDescription="Go to telegram channel"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:tint="@color/white"
+                    android:src="@drawable/telegram_svgrepo_com"
+                    android:layout_gravity="center"/>
+
+<!--                <android.widget.TextView-->
+<!--                    android:id="@+id/telegram_btn_title"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:fontFamily="@font/ossan_reg"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="TELEGRAM"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#FFFFFF"-->
+<!--                    android:textSize="35dp"-->
+<!--                    android:typeface="monospace" />-->
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/github_btn"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.45"
+                android:layout_height="104dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="@color/g4"
+                android:textAlignment="center"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/telegram_btn">
+                <ImageView
+                    android:contentDescription="Go to github page"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:tint="@color/white"
+                    android:src="@drawable/github_142_svgrepo_com"
+                    android:layout_gravity="center"/>
+
+<!--                <android.widget.TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:fontFamily="@font/ossan_reg"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="GITHUB"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#FFFFFF"-->
+<!--                    android:textSize="35dp"-->
+<!--                    android:typeface="monospace" />-->
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toBottomOf="@id/discord_btn"
+                android:background="@color/white"
+                android:foreground="@color/white"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginTop="12dp"
+                app:strokeColor="@color/white">
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:id="@+id/promo_card"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="15dp"-->
+<!--                app:cardCornerRadius="8dp"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/telegram_btn">-->
+
+<!--                <com.github.chrisbanes.photoview.PhotoView-->
+<!--                    android:id="@+id/promo_view"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:scaleType="fitCenter" />-->
+<!--            </com.google.android.material.card.MaterialCardView>-->
 
 
 

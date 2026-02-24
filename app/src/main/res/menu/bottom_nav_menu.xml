@@ -11,6 +11,6 @@
         android:title="Schedule" />
     <item
         android:id="@+id/brain_q"
-        android:icon="@drawable/books_svgrepo_com"
-        android:title="Brain-Q" />
+        android:icon="@drawable/notification_box_svgrepo_com"
+        android:title="Notice" />
 </menu>

@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.auctaritascodex",
+  "applicationId": "com.nyx_corp.auctaritascodex",
   "variantName": "release",
   "elements": [
     {
@@ -12,7 +12,7 @@
       "filters": [],
       "attributes": [],
       "versionCode": 1,
-      "versionName": "1.0",
+      "versionName": "1.0.1",
       "outputFile": "app-release.apk"
     }
   ],
