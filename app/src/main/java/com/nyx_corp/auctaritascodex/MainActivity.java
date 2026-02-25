@@ -7,6 +7,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.PowerManager;
 import android.provider.Settings;
 import android.view.HapticFeedbackConstants;
@@ -106,40 +108,44 @@ protected void onCreate(Bundle savedInstanceState) {
             .build();
     mFirebaseRemoteConfig.setConfigSettingsAsync(configSettings);
 
-    String app_version = mFirebaseRemoteConfig.getString("app_version");
-    String current_version = BuildConfig.VERSION_NAME;
+// Create a Handler associated with the main looper
+    new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+        @Override
+        public void run() {
+            // Your existing logic starts here
+            String app_version = mFirebaseRemoteConfig.getString("app_version");
+            String current_version = BuildConfig.VERSION_NAME;
 
-    if (!app_version.equals(current_version)) {
-        LayoutInflater inflater = LayoutInflater.from(this);
-        View dialogView = inflater.inflate(R.layout.update_app_context, null);
+            if (!app_version.equals(current_version)) {
+                LayoutInflater inflater = LayoutInflater.from(MainActivity.this); // Use Activity context
+                View dialogView = inflater.inflate(R.layout.update_app_context, null);
 
-        Button btn_download_app = dialogView.findViewById(R.id.btn_download_app);
-        Button not_now = dialogView.findViewById(R.id.not_now);
+                Button btn_download_app = dialogView.findViewById(R.id.btn_download_app);
+                Button not_now = dialogView.findViewById(R.id.not_now);
 
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.AlertDialog_App_Rounded);
+                builder.setView(dialogView);
+                AlertDialog dialog = builder.create();
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AlertDialog_App_Rounded);
-        builder.setView(dialogView);
-        AlertDialog dialog = builder.create();
+                btn_download_app.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Knight-project/Auctoritas-Codex/releases/latest/download/app-release.apk"));
+                        startActivity(intent);
+                    }
+                });
 
-        btn_download_app.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                not_now.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
 
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Knight-project/Auctoritas-Codex/releases/latest/download/app-release.apk"));
-                startActivity(intent);
+                dialog.show();
             }
-        });
-
-        not_now.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
-
-        dialog.show();
-
         }
+    }, 10000); // 10,000 milliseconds = 10 seconds
 
 
 
