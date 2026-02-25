@@ -11,31 +11,32 @@ This was made specifically for my batchmates in the **OSL 9th Batch, FBS, Univer
 ---
 
 ## What is it? 
-The app is a focused gateway to the Codex site. I kept the UI minimal and the aesthetic clean to make sure the website itself stays the main focus. No clutter, just the materials you need.
+The app is a focused gateway to the Codex site. I kept the UI minimal and the aesthetic clean. No clutter, just the the things you need.
 
 ### Key Features:
-* **Full Integration:** A dedicated window for the Auctoritas Codex site.
+* **Full Integration:** A dedicated window for the Auctoritas Codex site, with custom landing page and offline tab and notice tab.
+* **Offline Features:** Can an view the schedule offline and have it sync to the latest version automatically!
+* **Push Notifications:** Users will now receive push notifications for notices!
 * **Upload & Download Support:** I’ve made sure file handling works—you can download notes or upload resources directly through the app.
 * **Minimalist Design:** No extra fluff. The UI is simple and stays out of the way.
-* **First Release:** Version 1.0 is officially out and ready for use.
+* **First Official Release:** Version 1.0.1 is officially out and ready for use.
 
 ---
 
 ## Current Status
-* **Internet Required:** For now, the app only works if you are connected to the internet. 
-* **Offline Features:** I am working on adding offline support soon so you can check your files even without a connection.
+* **Internet Required:** The app is no longer fully dependent on network connections though to access the notices and materials you do need to be connected. 
+* **Offline Features:** Due to constant requests, offline features have been added and are working.
 
 ---
 
 ## Roadmap 
 Since this is a personal project, I'll be updating it as I go. Upcoming goals include:
-* **Offline Mode:** Local caching for documents.
-* **Optimization:** Making the wrapper even lighter and faster.
+* Currently there is no reasons for future updates other then simple bug fixes.
 
 ---
 
 ## Installation & Usage
-1. Download the **Version 1.0** release.
+1. Download the **Version 1.0.1** release.
 2. Install it on your device.
 3. Open it up and get straight to your study materials.
 
